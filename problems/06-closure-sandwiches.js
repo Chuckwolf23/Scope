@@ -16,9 +16,23 @@ let sandwich2 = sandwichMaker(); // => returns a function
 sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
+let sandwichMaker = function () {
+  let order = "One sandwich with tomato"
+  let maker = function (ingredient) {
+    order = order + " and " + ingredient
+    return order
+  }
+  return maker
+}
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 
-// Your code here
-
+// Another Sandwich:
+let sandwich2 = sandwichMaker(); // => returns a function
+console.log(sandwich2("pb")) // => "One sandwich with tomato and pb"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
