@@ -17,8 +17,23 @@ divideByFive(50); // returns 10
 
 
 ***********************************************************************/
+// write a function names dynamicDivide.
+let dynamicDivide = function(divisor){
+// create a second function for it to call on
+let change = function(num){
+  return num / divisor
 
-// Your code here
+}
+return change
+}
+const halfer = dynamicDivide(2); // returns a function
+halfer(20); // returns 10
+
+const divideByThree = dynamicDivide(3);
+divideByThree(30); // returns 10
+
+const  divideByFive = dynamicDivide(5);
+divideByFive(50); // returns 10
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -24,9 +24,35 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
+//create coinCollector() function
+const coinCollector = function(numCoins){
+let arr = []
+const collection = function(num){
+// create empty arr
+for(let i = 0; i <numCoins.length; i++){
+//create a push method so all of the cones in the argment is pushed into the empty arr
+let big = num[i]
+if(big > "0" ){arr.push(big )}
+//return push method
+}
+return arr
+}
+return collection
+}
 
-// Your code here
+  let oneCoin = coinCollector(1); // returns a function
+  console.log(oneCoin(10)); // prints [10]
 
+
+  let twoCoins = coinCollector(2); // returns a function
+  twoCoins(25); // returns a function
+  console.log(twoCoins(10)); // prints [25, 10]
+
+
+  let threeCoins = coinCollector(3); // returns a function
+  threeCoins(25); // returns a function
+  threeCoins(5); // returns a function
+  console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
